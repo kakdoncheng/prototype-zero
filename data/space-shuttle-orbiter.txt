@@ -1,0 +1,72 @@
+blueprint: Space Shuttle
+	attributes
+		name: Challenger
+		serial-number: OV-099
+		actual-length: 37.237
+		manufacturer: Rockwell International
+		category: Orbiter Shuttle
+		texture-ship: space-shuttle-orbiter
+		texture-thrust: prototype-thruster
+		bunks: 1
+		cargo-space: 24400
+		outfit-space: 31000
+		mass: 38000
+		hull: 100
+		armor: 0
+		drag: 10.6
+		heat-capacity: 0.8
+	outfits
+		Auxillary Fuel Tank, 1
+		Redox Fuel Cell Stack, 1
+		Rocketdyne RS-25 Rocket Engine, 3
+		Aerojet AJ10-190 Rocket Engine, 2
+	cargo
+		Food, 2000
+		Equipment, 12500
+	hitbox
+		0, 0, 16
+		0, -16, 16
+		0, -32, 16
+		0, 16, 16
+		0, 32, 12
+		0, 44, 12
+	engines
+		-6, -62
+		6, -62
+		0, -60
+		-8, -60
+		8, -60
+
+outfit: Auxillary Fuel Tank
+	category: Systems
+	cost: 0
+	mass: 1800
+	liquid-fuel: 125000
+
+outfit: Redox Fuel Cell Stack
+	category: Power
+	cost: 0
+	mass: 20000
+	energy: 88250000
+	energy-generation: 21200
+	heat-generation: 12800
+
+outfit: Rocketdyne RS-25 Rocket Engine
+	category: Engine
+	cost: 0
+	mass: 3177
+	engine-thrust: 1859000
+	engine-thrust-liquid-fuel: 520
+	engine-thrust-energy: 44000
+	engine-thrust-heat: 12800
+
+outfit: Aerojet AJ10-190 Rocket Engine
+	category: Engine
+	cost: 0
+	mass: 118
+	engine-turn: 13700
+	engine-turn-liquid-fuel: 12
+	engine-turn-energy: 5200
+	engine-turn-heat: 4800
+
+finalize

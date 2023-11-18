@@ -1,0 +1,69 @@
+blueprint: Model 2405
+	attributes
+		name: Swordfish II
+		canon-length: 13.8
+		actual-length: 15
+		manufacturer: Doohan
+		category: Fighter
+		texture-ship: swordfish-ii
+		texture-thrust: af-15c-turbine
+		bunks: 1
+		cargo-space: 0
+		outfit-space: 0
+		mass: 8400
+		hull: 100
+		armor: 0
+		drag: 4.4
+		heat-capacity: 0.8
+		engine-thrust: 5725000
+		engine-reverse-thrust: 1440000
+		engine-turn: 19200
+	outfits
+		GENOM L-s9.3 Blaster, 4
+		WDF Armory M3C Heavy Plasma Cannon, 1
+		WDF Armory Shielding, 1
+		ExoSalusia FR.3a Reactor, 1
+		AF-15C Aero-Spike Turbines, 1
+		Composite Reinforced Titanium Plating, 1
+	hitbox
+		0, 2, 6
+		0, -6, 8
+	weapons
+		-28, 7, -0.03
+		28, 7, 0.03
+	engines
+		1, -36
+
+blueprint: Modified MONO-C
+	attributes
+		name: Red Tail
+		canon-length: 8.6
+		manufacturer: Unknown
+		category: Transport
+		texture-ship: red-tail
+		texture-thrust: prototype-thruster
+		bunks: 1
+		cargo-space: 0
+		outfit-space: 0
+		mass: 7200
+		hull: 100
+		armor: 0
+		drag: 6.4
+		heat-capacity: 0.65
+		engine-thrust: 3840000
+		engine-reverse-thrust: 3840000
+		engine-turn: 12200
+	outfits
+		40mm Bofors Autocannon, 2
+		M264 Missile Launcher, 2
+		Decoy Flare Launcher, 2
+		AF-22S Vortex Stabilizers, 1
+	hitbox
+		0, 0, 16
+	weapons
+		-18, 12
+		18, 12
+	engines
+		0, -16
+
+finalize

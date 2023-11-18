@@ -1,0 +1,204 @@
+#This is a single-line comment.
+#This will be our last cry before eternal silence. May thy flesh and bones be consumed.
+
+blueprint: Prototype Voyager
+	attributes
+		manufacturer: Astroneer Labs
+		category: Utility
+		texture-ship: prototype-voyager
+		texture-thrust: prototype-thruster
+		bunks: 1
+		cargo-space: 0
+		outfit-space: 0
+		mass: 2240
+		hull: 100000
+		armor: 0
+		drag: 8.2
+		heat-capacity: 0.8
+		engine-thrust: 256000
+		engine-reverse-thrust: 0
+		engine-turn: 2880
+	hitbox
+		0, 0, 8
+	outfits
+		Prototype Solid-Fuel Booster, 1
+		Prototype SC.MU-12 Stabilizers, 1
+	engines
+		0, -16
+
+blueprint: Prototype Zero
+	attributes
+		manufacturer: Unknown
+		category: Fighter
+		texture-ship: prototype-zero
+		texture-thrust: prototype-thruster
+		bunks: 1
+		cargo-space: 0
+		outfit-space: 12400
+		mass: 2600
+		hull: 100000
+		armor: 0
+		drag: 4.8
+		heat-capacity: 1.2
+	hitbox
+		0, -8, 16
+	outfits
+		Prototype Ion Thrusters, 1
+		Prototype Ion Stabilizers, 2
+		Composite RH-7072 Armor Plates, 1
+		DU238 Armor Plates, 2
+	weapons
+		-9, 0
+		0, 9
+		9, 0
+	engines
+		-4, -26
+		4, -26
+
+outfit: Prototype Ion Thrusters
+	category: Engine
+	texture-thumbnail: ???
+	cost: 0
+	mass: 2250
+	engine-thrust: 4885000
+	engine-thrust-energy: 7200000
+	engine-thrust-heat: 2315000
+
+outfit: Prototype Ion Stabilizers
+	category: Engine
+	texture-thumbnail: ???
+	cost: 0
+	mass: 480
+	engine-turn: 10800
+	engine-turn-energy: 225200
+	engine-turn-heat: 104800
+
+outfit: Composite RH-7072 Armor Plates
+	category: Systems
+	texture-thumbnail: ???
+	cost: 0
+	mass: 1200
+	hull: 180000
+	armor: 2.8
+
+outfit: DU238 Armor Plates
+	category: Systems
+	texture-thumbnail: ???
+	cost: 0
+	mass: 2200
+	hull: 440000
+	armor: 1.2
+
+outfit: 20mm M84A2S Vulcan
+	category: Weapons
+	texture-thumbnail: ???
+	cost: 50000
+	mass: 180
+
+outfit: 20mm PGU-28A
+	category: Ammunition
+	texture-thumbnail: ???
+	cost: 25
+	mass: 0.2
+	
+weapon: 20mm M84A2S Vulcan
+	attributes
+		texture: ???
+		texture-projectile: 20mm-slug
+		projectile-color: 0000FF
+		rate-of-fire: 10
+		accuracy: 1.0
+		wind-up: 0.5
+		wind-up-heat: 4800
+		wind-up-energy: 440
+		damage: 200000
+		heat-damage: 0
+		energy-damage: 0
+		armor-penetration: 0
+		speed: 1080
+		range: 680
+		hit-force: 40000
+		recoil-force: 250000
+		ammo: 5
+		ammo-type: 20mm PGU-28A
+		ammo-capacity: 3000
+		heat: 80000
+		energy: 440
+	sounds
+		# trigger: sfx-name, volume
+		# can have multiple sound effects for each condition
+		on-fire: ???, 1.0
+		on-impact: ???, 1.0
+	particles
+		# trigger: texture-name, fps, scale
+		# can have multiple animations for each condition
+		on-fire: ???, 8, 1.0
+		on-active: ???, 8, 1.0
+		on-impact: ???, 8, 1.0
+
+outfit: Prototype Blaster
+	category: Weapons
+	texture-thumbnail: ???
+	cost: 480000
+	mass: 180
+
+weapon: Prototype Blaster
+	attributes
+		texture-projectile: prototype-bullet
+		projectile-color: B4FFFF
+		diffuse-color: FF0000
+		rate-of-fire: 5
+		accuracy: 1
+		damage: 100000
+		heat-damage: 50000
+		energy-damage: 50000
+		armor-penetration: 0
+		speed: 840
+		range: 480
+		hit-force: 0
+		recoil-force: 0
+		ammo-type: None
+		heat: 80000
+		energy: 440
+
+# Nothing below this line will be loaded
+finalize
+
+# X-15
+blueprint: Type 1 BVR-SPBM
+	attributes
+		original-manufacturer: North American Aviation
+		original-model: X-15
+		actual-length: 14.99
+		category: Experimental Superweapon
+		texture-ship: mod-x-15
+		texture-thrust: prototype-thruster
+		automaton: 1
+		bunks: 0
+		cargo-space: 0
+		outfit-space: 0
+		mass: 6650
+		fuel: 8600
+		hull: 100
+		armor: 0
+		drag: 0.18
+		heat-capacity: 0.8
+		engine-thrust: 2650000
+		engine-reverse-thrust: 0
+		engine-turn: 7000
+	hitbox
+		0, -18, 6
+		0, -12, 6
+		0, -6, 6
+		0, 0, 6
+		0, 6, 6
+		0, 12, 4
+	outfits
+		Isotope-322 Core Harness, 1
+		Inertial Guidance System, 1
+		Electrolytic Capacitor Bank, 1
+		Rocket Fuel Tank, 1
+		Prototype Fusion Drive, 1
+		XLR99-RM-2 Rocket Engine, 1
+	engines
+		0, -30
