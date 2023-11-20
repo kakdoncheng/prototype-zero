@@ -9,6 +9,13 @@ Thumbs.db
 .settings/
 .classpath
 .project
+
+bin/
 misc/
 prototype-zero_lib/
 prototype-zero-notes.txt
+init.cmd
+build-and-run.cmd
+start.cmd
+build-args
+prototype-zero.jar

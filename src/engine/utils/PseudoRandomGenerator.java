@@ -5,7 +5,7 @@ import java.util.Random;
 public class PseudoRandomGenerator {
 	
 	private Random r;
-	private String alphabet=" ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßğñòóôõö÷øùúûüışÿ€µƒABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~‚„…†‡ˆ‰‹Œ‘’“”•–—˜™š›œšŸ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´¶·¸¹º»¼½¾¿";
+	private String alphabet=" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 	
 	public PseudoRandomGenerator(long seed){
 		r=new Random(seed);

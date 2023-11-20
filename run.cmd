@@ -1,2 +1,1 @@
-java -Djava.library.path=natives/windows -cp "prototype-zero.jar;lib/lwjgl.jar;lib/lwjgl_util.jar;" main.Launcher
-pause>nul
+java -Djava.library.path=natives/windows -cp "bin;lib/lwjgl2/lwjgl.jar;lib/lwjgl2/lwjgl_util.jar;" main.Launcher

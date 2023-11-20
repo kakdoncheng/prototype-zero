@@ -56,14 +56,21 @@ public abstract class Game {
 				//	System.out.println(idm+" "+idm.isFullscreenCapable());
 				//}
 				
-				// attempt to set display mode to correct resolution
+				// attempt to set display mode to either the monitor or preferred resolution,
+				// whichever is smaller
+				boolean usePreferredResolution=false;
 				if(fullscreen){
 					DisplayMode monitor=Display.getDesktopDisplayMode();
-					width=monitor.getWidth();
-					height=monitor.getHeight();
+					if(monitor.getWidth()<=width || monitor.getHeight()<=height) {
+						width=monitor.getWidth();
+						height=monitor.getHeight();
+					} else {
+						usePreferredResolution=true;
+					}
 					//Display.setFullscreen(true);
 					Display.setDisplayModeAndFullscreen(monitor);
-				}else{
+				}
+				if(!fullscreen || usePreferredResolution){
 					org.lwjgl.util.Display.setDisplayMode(dm, new String[]{
 							"width="+width,
 							"height="+height,
@@ -71,9 +78,12 @@ public abstract class Game {
 							"freq="+60,
 							});
 				}
+				//System.out.println(width+"x"+height+" "+usePreferredResolution);
 			} catch (Exception e) {
 				e.printStackTrace();
-				System.out.println("engine.Game:ERROR: Unable to enter fullscreen, continuing in windowed mode.");
+				// on failure to create window, exit with code 1
+				System.exit(1);
+				//System.out.println("engine.Game:ERROR: Unable to enter fullscreen, continuing in windowed mode.");
 			}
 			
 			Display.setVSyncEnabled(true);

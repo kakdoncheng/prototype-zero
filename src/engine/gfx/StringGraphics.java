@@ -16,7 +16,7 @@ import java.util.HashMap;
 public class StringGraphics {
 	
 	private static char nul='?';
-	private static String alphabet=" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~Ï€Ð°Ð±Ð²Ð³Ð´ÐµÑ‘Ð¶Ð·Ð¸Ð¹ÐºÐ»Ð¼Ð½Ð¾Ð¿Ñ€Ñ�Ñ‚ÑƒÑ„Ñ…Ñ†Ñ‡ÑˆÑ‰ÑŠÑ‹ÑŒÑ�ÑŽÑ�Ð�Ð‘Ð’Ð“Ð”Ð•Ð�Ð–Ð—Ð˜Ð™ÐšÐ›ÐœÐ�ÐžÐŸÐ Ð¡Ð¢Ð£Ð¤Ð¥Ð¦Ð§Ð¨Ð©ÐªÐ«Ð¬Ð­Ð®Ð¯";
+	private static String alphabet=" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~π";
 	private static HashMap<Character, Texture> lucida, unifont;
 	
 	public static void registerFont(String path){
@@ -46,7 +46,6 @@ public class StringGraphics {
 		g.setColor(Color.WHITE);
 		g.drawString(c+"", 0, 14);
 		g.dispose();
-		//System.out.println(c+" "+img);
 		TextureLoader.loadTexture(c+"", img);
 		lucida.put(c, TextureLoader.$texture(c+""));
 		TextureLoader.removeTexture(c+"");
@@ -58,16 +57,13 @@ public class StringGraphics {
 		g.setColor(Color.WHITE);
 		g.drawString(c+"", 0, 14);
 		g.dispose();
-		//System.out.println(c+" "+img);
 		TextureLoader.loadTexture(c+"", img);
 		unifont.put(c, TextureLoader.$texture(c+""));
 		TextureLoader.removeTexture(c+"");
 	}
 	
-	//new Font("Lucida Console", Font.BOLD, 16);
-	// !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 	public static void init(){
-		registerFont("./fonts/unifont-14.0.04.ttf");
+		registerFont("./fonts/unifont-15.1.04.otf");
 		lucida=new HashMap<Character, Texture>();
 		for(char c:alphabet.toCharArray()){
 			loadCharTexture(c);

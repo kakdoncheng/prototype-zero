@@ -89,7 +89,7 @@ public class PrototypeGame extends Game{
 		
 		setFullscreen(true);
 		setFixedStep(true);
-		setResolution(1280, 720);
+		setResolution(1920, 1080);
 		setFPSLimit(60);
 		
 		// slow mode

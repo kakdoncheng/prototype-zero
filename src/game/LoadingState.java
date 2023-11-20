@@ -19,8 +19,7 @@ import engine.utils.FileExplorer;
 
 public class LoadingState extends State{
 	
-	public static final String LOAD_PATH="C:\\Users\\Ben\\Desktop\\endless-sky-clone\\";
-	//public static final String LOAD_PATH=".\\";
+	public static final String LOAD_PATH=".\\";
 	public static final char COMMENT_DELIMITER='#';
 
 	private PrototypeGame game;
